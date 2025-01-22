@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>ec8860b4-e48a-43b8-a7b5-140aaba52889</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="techsuite-factcheck"/>
-  <Description DefaultValue="A template to get started."/>
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+<OfficeApp 
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" 
+  xsi:type="TaskPaneApp">
+  <Id>50d76ba8-f662-4402-b276-9d30eb68d93b</Id>
+  <Version>1.1.0.13</Version>
+  <ProviderName>TechSuite</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+  <DisplayName DefaultValue="TechSuite Factcheck"/>
+  <Description DefaultValue="TechSuite Factcheck Add-in"/>
+  <IconUrl DefaultValue="https://bakuyasu.techsuite.biz/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://bakuyasu.techsuite.biz/assets/icon-80.png"/>
+  <SupportUrl DefaultValue="https://bakuyasu.techsuite.biz"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://bakuyasu.techsuite.biz</AppDomain>
+    <AppDomain>https://bakuyasu.techsuite.co.jp</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.3">
+      <Set Name="WordApi" MinVersion="1.3" />
+    </Sets>
+  </Requirements>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+    <SourceLocation DefaultValue="https://bakuyasu.techsuite.biz/src/taskpane/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Description resid="GetStarted.Description"/>
     <Hosts>
       <Host xsi:type="Document">
         <DesktopFormFactor>
@@ -62,23 +74,23 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://bakuyasu.techsuite.biz/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://bakuyasu.techsuite.biz/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://bakuyasu.techsuite.biz/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://bakuyasu.techsuite.co.jp"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://bakuyasu.techsuite.biz/src/commands/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://bakuyasu.techsuite.biz/src/taskpane/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Task Pane"/>
+        <bt:String id="GetStarted.Title" DefaultValue="TechSuite Factcheck"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="TechSuite"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Show TechSuite"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="TechSuite Factcheck loaded successfully. Go to the HOME tab and click the 'Show TechSuite' button to get started."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show TechSuite"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
